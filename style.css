@@ -1,0 +1,94 @@
+/* Basic layout */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 320px;
+  animation: fadeIn 1s ease;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input and button */
+input {
+  padding: 10px;
+  width: 70%;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #574b90;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #f7f7f7;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 8px solid #ffa502; /* Default for pending */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  animation: slideIn 0.4s ease;
+}
+
+li.done {
+  background-color: #dff9fb;
+  border-left: 8px solid #2ed573;
+  color: #555;
+  text-decoration: line-through;
+}
+
+li:hover {
+  transform: scale(1.03);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
